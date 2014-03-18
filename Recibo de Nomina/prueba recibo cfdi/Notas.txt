@@ -1,0 +1,23 @@
+Al ejecutar imp recibo
+Abrir l reports
+
+clic drecho en data model
+reports editor
+abre el query
+main query
+meter
+
+
+
+where patril action id y agregar campos
+
+
+.........................................
+reports, sacar el quyery de los empleados 
+ruta QR
+
+-----------------------------------------
+
+
+
+

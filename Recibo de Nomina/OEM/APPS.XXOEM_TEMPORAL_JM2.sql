@@ -1,0 +1,24 @@
+CREATE TABLE APPS.XXOEM_TEMPORAL_JM2
+(
+  MENSAJE  VARCHAR2(1000 BYTE)
+)
+TABLESPACE SYSTEM
+PCTUSED    40
+PCTFREE    10
+INITRANS   1
+MAXTRANS   255
+STORAGE    (
+            INITIAL          16K
+            NEXT             3784K
+            MINEXTENTS       1
+            MAXEXTENTS       505
+            PCTINCREASE      50
+            FREELISTS        1
+            FREELIST GROUPS  1
+            BUFFER_POOL      DEFAULT
+           )
+LOGGING 
+NOCOMPRESS 
+NOCACHE
+NOPARALLEL
+MONITORING;

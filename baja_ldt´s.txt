@@ -1,0 +1,41 @@
+#programa concurrente
+
+FNDLOAD  apps/essilor01 O Y DOWNLOAD $FND_TOP/patch/115/import/afcpprog.lct XXUSG - Carga de Pedidos HD.ldt PROGRAM APPLICATION_SHORT_NAME="ONT" CONCURRENT_PROGRAM_NAME="XXUSG - Carga de Pedidos HD"
+
+#request group
+
+FNDLOAD apps/essilor01 0 Y DOWNLOAD $FND_TOP/patch/115/import/afcpreqg.lct XXESS_INFOPLANEACION_RG.ldt REQUEST_GROUP APPLICATION_SHORT_NAME="INV" REQUEST_GROUP_NAME="All Inclusive GUI" REQUEST_GROUP_UNIT UNIT_TYPE="P" UNIT_APP="INV" UNIT_NAME="XXESS_INFOPLANEACION"
+
+
+
+###########baja data template y data definition###########
+
+FNDLOAD apps/essilor01 O Y DOWNLOAD  $XDO_TOP/patch/115/import/xdotmpl.lct XXESS_INFOPLANEACION_XDODTEX.ldt XDO_DS_DEFINITIONS APPLICATION_SHORT_NAME='INV' DATA_SOURCE_CODE='XXESS_INFOPLANEACION' TMPL_APP_SHORT_NAME='INV' TEMPLATE_CODE='XXESS_INFOPLANEACION'
+
+#######
+
+
+
+#form
+
+$FND_TOP/bin/FNDLOAD apps/!@qwaszx 0 Y DOWNLOAD $FND_TOP/patch/115/import/afsload.lct XXEMEX_ARREFACM_FORM.ldt FORM FORM_NAME="XXEMEX_ARREFACM" 
+
+#funcion form
+FNDLOAD apps/mdb#p0rta 0 Y DOWNLOAD $FND_TOP/patch/115/import/afsload.lct XXEMEX_OMLECTOR_FUNC.ldt FUNCTION FUNCTION_NAME="XXEMEX_OMLECTOR"
+
+
+
+
+#data definition
+
+FNDLOAD apps/essilor01 O Y DOWNLOAD  $XDO_TOP/patch/115/import/xdotmpl.lct XXEMEX_BATCH_DIOT_XDODTEX.ldt XDO_DS_DEFINITIONS APPLICATION_SHORT_NAME='SQLAP' DATA_SOURCE_CODE='XXEMEX_APDIOT_DIOT' TMPL_APP_SHORT_NAME='SQLAP' TEMPLATE_CODE='XXEMEX_APDIOT_DIOT'
+
+
+
+#values sets
+
+FNDLOAD apps/apps 0 Y DOWNLOAD @FND:patch/115/import/afffload.lct AMOX_VSET.ldt VALUE_SET FLEX_VALUE_SET_NAME="AMOX_VSET"
+    6 #
+    7 # Subir la definición de Juego de Valores AMOX_VSET
+    8 #
+    9 FNDLOAD apps/apps 0 Y UPLOAD @FND:patch/115/import/afffload.lct AMOX_VSET.ldt

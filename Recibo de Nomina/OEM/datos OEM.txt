@@ -1,0 +1,31 @@
+VPN datos
+
+USER: UEBS
+
+PASS: T0Z05
+----------------------------
+http://citqa.oem.com.mx:8000/
+
+user:apena
+
+pass:oracle321
+---------------------
+
+OEMQA=
+  (DESCRIPTION=
+    (ADDRESS=
+      (PROTOCOL=TCP)
+      (HOST=citqa.oem.com.mx)
+      (PORT=1521)
+    )
+    (CONNECT_DATA=
+      (INSTANCE_NAME=OEMQA)
+      (SERVICE_NAME=OEMQA)
+    )
+  )
+
+
+user: apps
+pass:apps
+-----------------
+
