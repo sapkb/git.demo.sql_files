@@ -3,5 +3,5 @@ OEM - Recibo de Nomina
 ejecutable
 XXOEM_RECIBO_NOMINA_2
 
-
+Parametros
 %31-JAN-2014%ESTO%
